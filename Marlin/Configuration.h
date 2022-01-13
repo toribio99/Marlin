@@ -2363,29 +2363,29 @@
 //#define TFTGLCD_PANEL_I2C
 
 //@
-#define FSMC_GRAPHICAL_TFT
-#if ENABLED(FSMC_GRAPHICAL_TFT)
-  //
-  // FSMC_UPSCALE 2 2x upscaler for 320x240 displays (default)
-  // FSMC_UPSCALE 3 3x upscaler for 480x320 displays
-  //
-  #define FSMC_UPSCALE 3
+// #define GRAPHICAL_TFT_UPSCALE
+// #if ENABLED(GRAPHICAL_TFT_UPSCALE)
+//   //
+//   // GRAPHICAL_TFT_UPSCALE 2 2x upscaler for 320x240 displays (default)
+//   // GRAPHICAL_TFT_UPSCALE 3 3x upscaler for 480x320 displays
+//   //
+//   #define GRAPHICAL_TFT_UPSCALE 3
 
-  //
-  // Change colors
-  // some colors are predefined, see /src/lcd/dogm/u8g_dev_tft_480~.cpp Line 160
-  // or use 16bit color (e.g. 0x0000 = black, 0xFFE0 = yellow)
-  // see https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
-  //
+//   //
+//   // Change colors
+//   // some colors are predefined, see /src/lcd/dogm/u8g_dev_tft_480~.cpp Line 160
+//   // or use 16bit color (e.g. 0x0000 = black, 0xFFE0 = yellow)
+//   // see https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
+//   //
 
-  #define TFT_MARLINUI_COLOR COLOR_WHITE // main foreground color
-  #define TFT_MARLINBG_COLOR COLOR_NAVY // background color
-  #define TFT_BTCANCEL_COLOR 0xA9A6 // cancel button
-  #define TFT_BTARROWS_COLOR COLOR_WHITE // arrows up/down
-  #define TFT_BTOKMENU_COLOR COLOR_WHITE // enter button
-  //#define TFT_DISABLED_COLOR COLOR_DARK // currently not used
+//   #define TFT_MARLINUI_COLOR COLOR_WHITE // main foreground color
+//   #define TFT_MARLINBG_COLOR COLOR_NAVY // background color
+//   #define TFT_BTCANCEL_COLOR 0xA9A6 // cancel button
+//   #define TFT_BTARROWS_COLOR COLOR_WHITE // arrows up/down
+//   #define TFT_BTOKMENU_COLOR COLOR_WHITE // enter button
+//   //#define TFT_DISABLED_COLOR COLOR_DARK // currently not used
 
-#endif
+// #endif
  
 
 
@@ -2726,7 +2726,7 @@
 // 480x320, 3.5", FSMC Display From MKS
 // Usually paired with MKS Robin Nano V1.2
 //
-//#define MKS_ROBIN_TFT35
+#define MKS_ROBIN_TFT35
 
 //
 // 480x272, 4.3", FSMC Display From MKS
@@ -2804,7 +2804,7 @@
  *   root of your SD card, together with the compiled firmware.
  */
 //#define TFT_CLASSIC_UI
-//#define TFT_COLOR_UI
+#define TFT_COLOR_UI
 //#define TFT_LVGL_UI
 
 #if ENABLED(TFT_LVGL_UI)
